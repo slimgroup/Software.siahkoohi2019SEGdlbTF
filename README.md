@@ -8,7 +8,7 @@ This code has been tested using Deep Learning AMI (Amazon Linux) Version 24.2 (p
 
 ```bash
 cd $HOME
-git clone https://github.com/alisiahkoohi/NN-augmented-wave-sim
+https://github.com/alisiahkoohi/wavefield-reconstruction
 cd $HOME/NN-augmented-wave-sim
 conda create -n tensorflow pip python=3.6
 source activate tensorflow
