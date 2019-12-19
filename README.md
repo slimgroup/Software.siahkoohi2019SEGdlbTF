@@ -9,7 +9,7 @@ This code has been tested using Deep Learning AMI (Amazon Linux) Version 24.2 (p
 ```bash
 cd $HOME
 https://github.com/alisiahkoohi/wavefield-reconstruction
-cd $HOME/NN-augmented-wave-sim
+cd $HOME/wavefield-reconstruction
 conda create -n tensorflow pip python=3.6
 source activate tensorflow
 pip install --user -r  requirements.txt
