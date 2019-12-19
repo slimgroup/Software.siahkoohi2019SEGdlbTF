@@ -5,7 +5,7 @@ smprate=0.1
 scheme=random
 
 experiment_name=ReciprocityGAN_freq${frequency}_A_train_${smprate}SamplingRate_${scheme}
-repo_name=specialization-exam-and-artifact-defense
+repo_name=wavefield-reconstruction
 path_data=$HOME/data
 path_model=$HOME/model/$experiment_name
 

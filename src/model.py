@@ -170,6 +170,7 @@ class wavefield_reconstrcution(object):
             self.file_trainB.close()
             self.file_training_mask.close()
 
+            print(" [*] Generating training pairs ...")
             self.data_generator.genMask(mask_sampling='random')
             self.data_generator.saveTrainDataset()
 
@@ -208,11 +209,11 @@ class wavefield_reconstrcution(object):
                 self.writer.add_summary(summary_str, counter)
 
                 counter += 1
-                if np.mod(counter, 100) ==0:
+                if np.mod(counter, 1) ==0:
                     print(("Epoch: [%2d] [%4d/%4d] time: %4.4f" % (
                         epoch, int(idx), int(len(batch_idxs)), time.time() - start_time)))
 
-                if np.mod(counter, args.print_freq) == 1:
+                if np.mod(counter, args.print_freq) == 0:
                     self.sample_model(args.sample_dir, epoch, idx, counter-1)
 
                 if np.mod(counter, int(floor(args.save_freq/self.batch_size))) == 2:

@@ -4,26 +4,29 @@ Codes for generating results in Siahkoohi, A., Kumar, R. and Herrmann, F.J., 201
 
 ## Prerequisites
 
-This code has been tested using Deep Learning AMI (Amazon Linux) Version 24.2 (predefined `tensorflow_p36` conda environment) on Amazon Web Services (AWS). We used `g3s.xlarge` instance. Following is the main library versions:
+This code has been tested using Deep Learning AMI (Amazon Linux) Version 24.2 (predefined `tensorflow_p36` conda environment) on Amazon Web Services (AWS). We used `g3s.xlarge` instance. Follow the steps below to install the necessary libraries:
 
-* `h5py==2.8.0`
+```bash
+cd $HOME
+git clone https://github.com/alisiahkoohi/NN-augmented-wave-sim
+cd $HOME/NN-augmented-wave-sim
+conda create -n tensorflow pip python=3.6
+source activate tensorflow
+pip install --user -r  requirements.txt
 
-* `matplotlib==3.0.3`
+```
 
-* `numpy==1.16.4`
-
-* `tensorflow==1.14.0`
-
+If you do not have GPU, replace `tensorflow-gpu==1.10.0` in the `requirements.txt` file with `tensorflow==1.10.0` and run the commands above.
 
 ## Dataset
 
-Links have been provided in `RunTraining.sh` script to automatically download the 10 Hz monochromatic seismic data into the necessary directory.
+Links have been provided in `RunTraining.sh` script to automatically download the 10 Hz monochromatic seismic data into the necessary directory. Total size of the dataset for each fequency is 6.52GB + 6.52GB + 734MB + 734MB + 118KB.
 
 ## Script descriptions
 
-`RunTraining.sh`\: script for running training on `AWS`. It will make `model/` and `data/` directory in `/home/ec2-user/` for storing training/testing data and saved neural net checkpoints and final results, respectively. Next, it will train a neural net for the experiment for 10 Hz monochromatic seismic data.
+`RunTraining.sh`\: script for running training. It will make `model/` and `data/` directory in `/home/ec2-user/` for storing training/testing data and saved neural net checkpoints and final results, respectively. Next, it will train a neural net for the experiment for 10 Hz monochromatic seismic data.
 
-`RunTesting.sh`\: script for testing the trained neural net on `AWS`. It will reconstruct the entire subsampled 10 Hz monochromatic seismic data and place the result in `sample/` directory to be used for plotting purposes.
+`RunTesting.sh`\: script for testing the trained neural net. It will reconstruct the entire subsampled 10 Hz monochromatic seismic data and place the result in `sample/` directory to be used for plotting purposes.
 
 `src/main.py`\: constructs `wavefield_reconstrcution` class using given arguments in `RunTraining.sh`\, defined in `model.py` and calls `train` function in the defined  `wavefield_reconstrcution` class.
 
@@ -32,7 +35,7 @@ Links have been provided in `RunTraining.sh` script to automatically download th
 
 ### Running the code
 
-To perform training on AWS, run:
+To perform training, run:
 
 ```bash
 # Running in GPU

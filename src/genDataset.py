@@ -22,6 +22,7 @@ class genDataset(object):
         self.input_data = input_data
         self.sampling_scheme = sampling_scheme
 
+        print(" [*] Reading seismic dataset ...")
         freq_num = floor((self.frequency - 20.)*(61-13)/(20-5) + 61)
         f = h5py.File(os.path.join(self.input_data, 'mapping_result.hdf5'), 'r')
         fdata = f['result'][...].astype(np.float32)
