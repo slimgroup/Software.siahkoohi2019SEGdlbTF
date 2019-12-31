@@ -20,7 +20,7 @@ If you do not have GPU, replace `tensorflow-gpu==1.10.0` in the `requirements.tx
 
 ## Dataset
 
-Links have been provided in `RunTraining.sh` script to automatically download the 10 Hz monochromatic seismic data into the necessary directory. Total size of the dataset for each fequency is 6.52GB + 6.52GB + 734MB + 734MB + 118KB.
+Links have been provided in `RunTraining.sh` script to automatically download the 10 Hz monochromatic seismic data into the necessary directory. Total size of the dataset for each fequency is 6.52GB + 6.52GB + 6.52GB + 118KB.
 
 ## Script descriptions
 
