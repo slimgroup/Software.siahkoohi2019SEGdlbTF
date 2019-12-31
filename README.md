@@ -38,7 +38,7 @@ Links have been provided in `RunTraining.sh` script to automatically download th
 To perform training, run:
 
 ```bash
-# Running in GPU
+# Running on GPU
 
 bash RunTraining.sh
 
@@ -47,7 +47,7 @@ bash RunTraining.sh
 To evaluated the trained network on test data set run the following. It will automatically load the latest checkpoint saved.
 
 ```bash
-# Running in GPU
+# Running on GPU
 
 bash RunTesting.sh
 
