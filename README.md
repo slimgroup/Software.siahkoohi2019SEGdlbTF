@@ -64,6 +64,24 @@ bash utilities/genFigures.sh
 The saving directory can be changed by modifying `savePath` variable in `utilities/genFigures.sh`\.
 
 
+## Citation
+
+If you find this siftware useful in your research, please cite:
+
+```bibtex
+@conference {siahkoohi2019SEGdlb,
+	title = {Deep-learning based ocean bottom seismic wavefield recovery},
+	booktitle = {SEG Technical Program Expanded Abstracts},
+	year = {2019},
+	note = {(SEG, San Antonio)},
+	month = {09},
+	pages = {2232-2237},
+	keywords = {machine learning, obn, reciprocity, reconstruction, SEG},
+	doi = {10.1190/segam2019-3216632.1}
+	author = {Ali Siahkoohi and Rajiv Kumar and Felix J. Herrmann}
+}
+```
+
 ## Questions
 
 Please contact alisk@gatech.edu for further questions.
