@@ -66,7 +66,7 @@ The saving directory can be changed by modifying `savePath` variable in `utiliti
 
 ## Citation
 
-If you find this siftware useful in your research, please cite:
+If you find this software useful in your research, please cite:
 
 ```bibtex
 @conference {siahkoohi2019SEGdlb,
